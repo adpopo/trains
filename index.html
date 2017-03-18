@@ -4,45 +4,72 @@
 	<title>Trains</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/trains.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyDVF6TPgh5rfsV9Rirxu7WqqkX8YcPIMKI",
+	    authDomain: "trains-1434d.firebaseapp.com",
+	    databaseURL: "https://trains-1434d.firebaseio.com",
+	    storageBucket: "trains-1434d.appspot.com",
+	    messagingSenderId: "69552442616"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 </head>
 <body>
 	<!-- jumbotron -->
-	<div></div>
+	<div class="jumbotron">
+		<h1>Trains</h1>
+		<h2>I ride those</h2>
+	</div>
 
-	<div>
-	<!-- table - column names -->
-    <thead>
-      <tr>
-        <th>Train Name</th>
-        <th>Destination</th>
-        <th>Frequency(min)</th>
-        <th>Next Arrival</th>
-        <th>Minutes Away</th>
-      </tr>
-    </thead>
-    <!-- table contents -->
-    <tbody>
+	<div id="tableBox">
+		<div>Current Train Schedule</div>
+		<table class="table-bordered">
+			<!-- table column names -->
+		    <thead>
+			    <tr>
+			        <th>Train Name</th>
+			        <th>Destination</th>
+			        <th>Frequency(min)</th>
+			        <th>Next Arrival</th>
+			        <th>Minutes Away</th>
+			    </tr>
+		    </thead>
+		    <!-- table contents -->
+		    <tbody id="trains">
+		    	<tr>
+		    		<th>Test Train</th>
+		    		<th>Nowhere</th>
+		    		<th>Once in a Lifetime</th>
+		    		<th>Never</th>
+		    		<th>Infinite</th>
+		    	</tr>
+		    </tbody>
+	    </table>
     </div>
 
-    <div>
+    <div id="inputBox">
 	<!-- add train -->
 		<!-- name -->
-		<label></label>
-		<input><br>
+		<label for="name">Train Name</label>
+		<input id="name" type="text"><br>
 		<!-- destination -->
-		<label></label>
-		<input><br>
+		<label for="dest">Destination</label>
+		<input id="dest" type="text"><br>
 		<!-- first train -->
-		<label></label>
-		<input><br>
+		<label for="first">First Train Time (HH.mm - military time)</label>
+		<input id="first" type="text"><br>
 		<!-- frequency -->
-		<label></label>
-		<input><br>
+		<label for="freq">Frequency (min)</label>
+		<input id="freq" type="text"><br>
 		<!-- button -->
-		<label></label>
-		<button></button>
+		<button id="addNew" class="btn btn-primary">Submit</button>
 	</div>
+
+	<script type="text/javascript" src="assets/trains.js"></script>
 </body>
+</html>
