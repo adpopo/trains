@@ -1,0 +1,56 @@
+.jumbotron{
+	text-align: center;
+	color: #FFF;
+	background-color: #66F;
+}
+
+h1{
+	font-size: 36pt;
+	font-weight: 600;
+}
+
+h2{
+	font-size: 14pt;
+	font-weight: 300;
+}
+
+body{
+	color: #FFF;
+	text-align: center;
+}
+
+#tableBox{
+	background-color: #66F;
+	padding: 10px;
+	margin: 10%;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	text-align: left;
+	border-radius: 10px;
+}
+
+.table-bordered{
+	color: #000;
+	background-color: #FFF;
+	margin: 10px;
+}
+
+th{
+	width: 150px;
+	font-weight: 700;
+}
+
+
+#inputBox{
+	background-color: #66F;
+	padding: 10px;
+	margin: 10%;
+	margin-top: 10px;
+	text-align: left;
+	border-radius: 10px;
+}
+
+input{
+	width: 95%;
+	margin-bottom: 10px;
+}

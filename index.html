@@ -7,6 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 	<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+
+	<script>
+    moment().format();
+	</script>
 	<script>
 	  // Initialize Firebase
 	  var config = {
@@ -22,11 +27,11 @@
 <body>
 	<!-- jumbotron -->
 	<div class="jumbotron">
-		<h1>Trains</h1>
+		<h1>TRAINS</h1>
 		<h2>I ride those</h2>
 	</div>
 
-	<div id="tableBox">
+	<div id="tableBox" class="lower">
 		<div>Current Train Schedule</div>
 		<table class="table-bordered">
 			<!-- table column names -->
@@ -52,22 +57,23 @@
 	    </table>
     </div>
 
-    <div id="inputBox">
+    <div id="inputBox" class="lower">
 	<!-- add train -->
 		<!-- name -->
-		<label for="name">Train Name</label>
+		<h2>Add New Trains Here:</h2><br>
+		<label for="name">Train Name</label><br>
 		<input id="name" type="text"><br>
 		<!-- destination -->
-		<label for="dest">Destination</label>
+		<label for="dest">Destination</label><br>
 		<input id="dest" type="text"><br>
 		<!-- first train -->
-		<label for="first">First Train Time (HH.mm - military time)</label>
+		<label for="first">First Train Time (HH.mm - military time)</label><br>
 		<input id="first" type="text"><br>
 		<!-- frequency -->
-		<label for="freq">Frequency (min)</label>
+		<label for="freq">Frequency (min)</label><br>
 		<input id="freq" type="text"><br>
 		<!-- button -->
-		<button id="addNew" class="btn btn-primary">Submit</button>
+		<button id="addNew" class="btn btn-success">Submit</button>
 	</div>
 
 	<script type="text/javascript" src="assets/trains.js"></script>
